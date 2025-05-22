@@ -1775,7 +1775,12 @@ expression support in the :mod:`re` module).
    intended to remove all case distinctions in a string. For example, the German
    lowercase letter ``'ß'`` is equivalent to ``"ss"``. Since it is already
    lowercase, :meth:`lower` would do nothing to ``'ß'``; :meth:`casefold`
-   converts it to ``"ss"``.
+   converts it to ``"ss"``, as follows. For example::
+
+      >>> 'ß'.casefold()
+      'ss'
+      >>> 'ß'.lower()
+      'ß'
 
    The casefolding algorithm is
    `described in section 3.13 'Default Case Folding' of the Unicode Standard
